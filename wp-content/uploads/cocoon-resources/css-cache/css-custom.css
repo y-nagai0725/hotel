@@ -11,6 +11,10 @@ body.public-page{
 .sidebar{
   width: 376px;
 }
+.logo-header img{
+  width: 140px;
+  height: auto;
+}
 /* .toc-content, */
 .toc-checkbox {
   display: none;
