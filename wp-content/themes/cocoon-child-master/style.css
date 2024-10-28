@@ -44,6 +44,7 @@ body {
 	    width: 100%;
 		padding: 20px 0;
 		background-color: transparent;
+		z-index: 1;
 	}
 }
 
@@ -61,6 +62,23 @@ body {
 	background-color: var(--white);
 	font-size: 14px;
 	height: 54px;
+	color: var(--black);
+	transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, backdrop-filter 0.3s ease-out;
+}
+
+.navi-in a.white {
+	color: var(--white);
+	background-color: transparent;
+	border-color: var(--white);
+}
+
+.navi-in a:hover {
+	background-color: var(--white);
+}
+
+.navi-in a.white:hover {
+	background-color: transparent;
+	backdrop-filter: blur(2px);
 }
 
 .navi-in a .caption-wrap {
@@ -72,17 +90,24 @@ body {
 }
 
 .navi-in a .caption-wrap::before {
-	font-family: 'Font Awesome 5 Free';
-    content: '\f054';
+	font-family: "Font Awesome 5 Free";
+    content: "\f054";
 	font-weight: 900;
+	font-size: 12px;
 	position: absolute;
 	top: 50%;
 	right: 0;
 	transform: translate(-18px, -50%);
+	transition: transform 0.3s ease-out;
+}
+
+.navi-in a:hover .caption-wrap::before {
+	transform: translate(-14px, -50%);
 }
 
 .navi-in a .item-label {
 	line-height: 1.5;
+	font-size: 13px;
 }
 
 .navi-menu-caption.menu-caption {
@@ -109,7 +134,147 @@ body {
 
 .menu-open.menu-button-in {
 	color: var(--black);
+	transition: color 0.3s ease-out;
 }
+
+.menu-open.menu-button-in.white {
+	color: var(--white);
+}
+
+#navi-menu-content {
+	overflow: hidden;
+	max-width: 100%;
+	top: 0;
+	left: 0;
+	transform: none;
+	display: flex;
+	flex-direction: column;
+	background: url(http://localhost/hotel/wp-content/uploads/2024/10/kyotoDSC_63930185-scaled.jpg) center center / cover;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease-out;
+}
+
+@media screen and (min-width: 1024px){
+	#navi-menu-content {
+		padding-top: 14px;
+	}
+}
+
+#navi-menu-input:checked ~ #navi-menu-content {
+	transform: none;
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity 0.3s ease-out;
+}
+
+#navi-menu-content .navi-menu-close-button.menu-close-button {
+	width: 70px;
+	height: 50px;
+	display: grid;
+	place-content: center;
+	align-self: flex-end;
+	margin-bottom: 40px;
+	color: var(--white);
+}
+
+@media screen and (min-width: 1024px){
+	#navi-menu-content .navi-menu-close-button.menu-close-button {
+		margin-bottom: 56px;
+	}
+}
+
+#navi-menu-content .menu-drawer {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+@media screen and (min-width: 1024px){
+	#navi-menu-content .menu-drawer {
+		gap: 32px;
+	}
+}
+
+#navi-menu-content .menu-drawer a {
+	color: var(--white);
+	font-size: 16px;
+}
+
+@media screen and (min-width: 1024px){
+	#navi-menu-content .menu-drawer a {
+		font-size: 19px;
+		position: relative;
+	}
+	
+	#navi-menu-content .menu-drawer a::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: var(--white);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease-out;
+	}
+	
+	#navi-menu-content .menu-drawer a:hover {
+		background-color: transparent;
+	}
+	
+	#navi-menu-content .menu-drawer a:hover::before {
+		transform: scaleX(1);
+	}
+}
+
+.menu-item-50 a {
+	border: 1px solid var(--white);
+	border-radius: 100vmax;
+	padding: 16px 32px;
+	position: relative;
+}
+
+.menu-item-50 a::after {
+	font-family: "Font Awesome 5 Free";
+    content: "\f054";
+	font-weight: 900;
+	font-size: 12px;
+	color: var(--white);
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(-16px, -50%);
+}
+
+@media screen and (min-width: 1024px){
+	.menu-item-50 a {
+		padding: 22px 44px;
+		transition: backdrop-filter 0.3s ease-out;
+	}
+	
+	.menu-item-50 a::after {
+		font-size: 14px;
+		transform: translate(-22px, -50%);
+		transition: transform 0.3s ease-out;
+	}
+	
+	.menu-item-50 a::before {
+		display: none;
+	}
+	
+	.menu-item-50 a:hover {
+		backdrop-filter: blur(2px);
+	}
+	
+	.menu-item-50 a:hover::after {
+		transform: translate(-18px, -50%);
+	}
+}
+
 
 /************************************
 ** ファーストビュー
