@@ -6,7 +6,7 @@
  * @license: http://www.gnu.org/licenses/gpl-2.0.html GPL v2 or later
  */ ?>
 <!-- Navigation -->
-<nav id="navi" class="navi cf" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<nav id="navi" class="navi cf<?php if(is_front_page()) :?> white<?php endif;?>" itemscope itemtype="https://schema.org/SiteNavigationElement">
   <div id="navi-in" class="navi-in wrap cf">
     <?php //ヘッダーナビ
     wp_nav_menu(
