@@ -81,6 +81,9 @@ label.screen-reader-text{
 .calendar_wrap{
   margin: 20px 0;
 }
+.wp-block-calendar .wp-calendar-table{
+  max-width: 400px;
+}
 
 .wp-calendar-table {
   border-collapse: collapse;
@@ -369,13 +372,10 @@ label.screen-reader-text{
 ************************************/
 .recent-comments{
   line-height: 1.3;
-  // .a-wrap{
-  //   &:hover{
-  //     .recent-comment-content{
-  //       @include bgc_hover;
-  //     }
-  //   }
-  // }
+  margin-bottom: 12px;
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 .recent-comment-avatar{
@@ -486,4 +486,10 @@ label.screen-reader-text{
   .wp-block-search__input {
     line-height: normal;
   }
+}
+
+.wp-block-categories-list,
+.wp-block-archives-list {
+  list-style: none;
+  padding-left: 0;
 }

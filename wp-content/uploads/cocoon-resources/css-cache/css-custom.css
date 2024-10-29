@@ -1,6 +1,7 @@
 
 body.public-page{
   --cocoon-text-color: #000000;
+  color: var(--cocoon-text-color);
 }
 body.public-page{
   background-color: #f8f8f8;

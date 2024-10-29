@@ -59,6 +59,12 @@ body {
 	display: none;
 }
 
+@media screen and (min-width: 1024px){
+	.header-container-in.hlt-top-menu .site-name-text-link {
+		display: block;
+	}
+}
+
 .navi {
 	background-color: transparent;
 }
@@ -308,6 +314,9 @@ body {
 	height: 100svh;
 	background-image: url("http://localhost/hotel/wp-content/uploads/2024/10/001ameman54-scaled.jpg");
 	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @media screen and (min-width: 1024px){
@@ -315,6 +324,22 @@ body {
 		height: 100vh;
 		background-image: url("http://localhost/hotel/wp-content/uploads/2024/10/001ameman54-scaled.jpg");
 	}
+}
+
+.appeal-in {
+	width: 40%;
+	min-width: 240px;
+	max-width: 400px;
+	min-height: auto;
+	aspect-ratio: 160 / 60;
+	display: block;
+	padding: 0;
+	margin: 0;
+	background: url(http://localhost/hotel/wp-content/uploads/2024/10/logo_white.png) center center / contain no-repeat;
+}
+
+.appeal-content {
+	display: none;
 }
 
 /************************************
