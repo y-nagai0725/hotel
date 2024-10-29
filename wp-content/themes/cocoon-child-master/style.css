@@ -33,6 +33,18 @@ body {
 	margin-top: 0;
 }
 
+.date-tags {
+	display: none;
+}
+
+.article-footer {
+	display: none;
+}
+
+.content {
+	margin-top: 0;
+}
+
 /************************************
 ** ヘッダー関連
 ************************************/
@@ -329,7 +341,7 @@ body {
 .appeal-in {
 	width: 40%;
 	min-width: 240px;
-	max-width: 400px;
+	max-width: 600px;
 	min-height: auto;
 	aspect-ratio: 160 / 60;
 	display: block;
