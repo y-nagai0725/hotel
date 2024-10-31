@@ -1,16 +1,26 @@
 const mySwiper = new Swiper('.swiper', {
-  // Optional parameters
-  autoplay: true,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  speed: 1200,
   loop: true,
-
-  // If we need pagination
+  loopAdditionalSlides: 1,
+  centeredSlides: true,
+  slidesPerView: 1.75,
+  spaceBetween: 40,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
+  breakpoints: {
+    768: { //画面幅768px以上
+      slidesPerView: 2,
+      spaceBetween: 60,
+    },
+    1024: { //画面幅1024px以上
+      slidesPerView: 2.5,
+      spaceBetween: 100,
+    }
+  },
 });

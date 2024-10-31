@@ -11,7 +11,10 @@ if ( !defined( 'ABSPATH' ) ) exit; ?>
   <div class="footer-bottom-logo">
     <?php generate_the_site_logo_tag(false); ?>
   </div>
-
+  <div class="footer-information-area">
+    <p class="footer-address">〒000-0000 北海道札幌市中央区大通西1丁目1-1</p>
+    <p class="footer-tel">Tel. 000-0000-0000</p>
+  </div>
   <div class="footer-bottom-content">
      <?php cocoon_template_part('tmp/navi-footer') ?>
 
