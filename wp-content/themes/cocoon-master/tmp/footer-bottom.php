@@ -15,6 +15,10 @@ if ( !defined( 'ABSPATH' ) ) exit; ?>
     <p class="footer-address">〒000-0000 北海道札幌市中央区大通西1丁目1-1</p>
     <p class="footer-tel">Tel. 000-0000-0000</p>
   </div>
+  <div class="footer-sns-area">
+    <a href="#" class="footer-sns-link" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="footer-sns-link" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
   <div class="footer-bottom-content">
      <?php cocoon_template_part('tmp/navi-footer') ?>
 

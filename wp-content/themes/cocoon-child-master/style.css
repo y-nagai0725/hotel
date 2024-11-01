@@ -24,13 +24,21 @@ Version:    1.1.3
 	--white-transparent: #ffffff1a;
 	--bg-white: #f8f8f8;
 	--hovered-opacity: 0.65;
+	--fv-image-sp: url(http://localhost/hotel/wp-content/uploads/2024/10/001ameman54-scaled.jpg);
+	--fv-image-pc: url(http://localhost/hotel/wp-content/uploads/2024/10/001ameman54-scaled.jpg);
+	--fv-logo: url(http://localhost/hotel/wp-content/uploads/2024/10/logo_white.png);
+	--nav-bg-image: url(http://localhost/hotel/wp-content/uploads/2024/10/kyotoDSC_63930185-scaled.jpg);
 }
 
 body {
-    font-family: "Lora", "Zen Old Mincho", serif;
-    font-weight: 500;
-    font-style: normal;
+	font-family: "Lora", "Zen Old Mincho", serif;
+	font-weight: 500;
+	font-style: normal;
 	margin-top: 0;
+}
+
+.breadcrumb {
+	display: none;
 }
 
 .date-tags {
@@ -45,6 +53,10 @@ body {
 	margin-top: 0;
 }
 
+.go-to-top {
+	z-index: 2;
+}
+
 /************************************
 ** ヘッダー関連
 ************************************/
@@ -52,16 +64,16 @@ body {
 	display: none;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	.header-container {
 		display: block;
 		position: fixed;
-	    width: 100%;
+		width: 100%;
 		padding: 20px 0;
 		background-color: transparent;
 		z-index: 1;
 	}
-	
+
 	.header-container-in {
 		width: 90%;
 	}
@@ -71,7 +83,7 @@ body {
 	display: none;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	.header-container-in.hlt-top-menu .site-name-text-link {
 		display: block;
 	}
@@ -88,7 +100,11 @@ body {
 	font-size: 14px;
 	height: 54px;
 	color: var(--black);
-	transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out, backdrop-filter 0.3s ease-out;
+	transition:
+		color 0.3s ease-out,
+		background-color 0.3s ease-out,
+		border-color 0.3s ease-out,
+		backdrop-filter 0.3s ease-out;
 }
 
 .navi.white a {
@@ -116,7 +132,7 @@ body {
 
 .navi a .caption-wrap::before {
 	font-family: "Font Awesome 5 Free";
-    content: "\f054";
+	content: "\f054";
 	font-weight: 900;
 	font-size: 12px;
 	position: absolute;
@@ -146,13 +162,13 @@ body {
 	justify-content: flex-end;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	.mobile-header-menu-buttons {
 		top: 22px;
 		bottom: initial;
 		left: initial;
 	}
-	
+
 	.mobile-menu-buttons .menu-icon {
 		font-size: 28px;
 	}
@@ -167,11 +183,11 @@ body {
 	color: var(--white);
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	#navi-menu-open {
 		transition: opacity 0.3s ease-out;
 	}
-	
+
 	#navi-menu-open:hover {
 		opacity: var(--hovered-opacity);
 	}
@@ -185,13 +201,13 @@ body {
 	transform: none;
 	display: flex;
 	flex-direction: column;
-	background: url(http://localhost/hotel/wp-content/uploads/2024/10/kyotoDSC_63930185-scaled.jpg) center center / cover;
+	background: var(--nav-bg-image) center center / cover;
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.3s ease-out;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	#navi-menu-content {
 		padding-top: 22px;
 	}
@@ -214,12 +230,12 @@ body {
 	color: var(--white);
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	#navi-menu-content .navi-menu-close-button.menu-close-button {
 		margin-bottom: 56px;
 		transition: opacity 0.3s ease-out;
 	}
-	
+
 	#navi-menu-content .navi-menu-close-button.menu-close-button:hover {
 		opacity: var(--hovered-opacity);
 	}
@@ -233,7 +249,7 @@ body {
 	gap: 16px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	#navi-menu-content .menu-drawer {
 		gap: 32px;
 	}
@@ -244,12 +260,12 @@ body {
 	font-size: 15px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	#navi-menu-content .menu-drawer a {
 		font-size: 19px;
 		position: relative;
 	}
-	
+
 	#navi-menu-content .menu-drawer a::before {
 		content: "";
 		position: absolute;
@@ -262,11 +278,11 @@ body {
 		transform-origin: left;
 		transition: transform 0.3s ease-out;
 	}
-	
+
 	#navi-menu-content .menu-drawer a:hover {
 		background-color: transparent;
 	}
-	
+
 	#navi-menu-content .menu-drawer a:hover::before {
 		transform: scaleX(1);
 	}
@@ -281,7 +297,7 @@ body {
 
 .menu-item-50 a::after {
 	font-family: "Font Awesome 5 Free";
-    content: "\f054";
+	content: "\f054";
 	font-weight: 900;
 	font-size: 12px;
 	color: var(--white);
@@ -291,32 +307,33 @@ body {
 	transform: translate(-16px, -50%);
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	.menu-item-50 a {
 		padding: 22px 44px;
-		transition: backdrop-filter 0.3s ease-out, background-color 0.3s ease-out;
+		transition:
+			backdrop-filter 0.3s ease-out,
+			background-color 0.3s ease-out;
 	}
-	
+
 	.menu-item-50 a::after {
 		font-size: 14px;
 		transform: translate(-22px, -50%);
 		transition: transform 0.3s ease-out;
 	}
-	
+
 	.menu-item-50 a::before {
 		display: none;
 	}
-	
+
 	.menu-item-50 a:hover {
 		background-color: var(--white-transparent) !important;
-		backdrop-filter: blur(2px);		
+		backdrop-filter: blur(2px);
 	}
-	
+
 	.menu-item-50 a:hover::after {
 		transform: translate(-18px, -50%);
 	}
 }
-
 
 /************************************
 ** ファーストビュー
@@ -324,17 +341,17 @@ body {
 .appeal {
 	width: 100%;
 	height: 100svh;
-	background-image: url("http://localhost/hotel/wp-content/uploads/2024/10/001ameman54-scaled.jpg");
+	background-image: var(--fv-image-sp);
 	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	.appeal {
 		height: 100vh;
-		background-image: url("http://localhost/hotel/wp-content/uploads/2024/10/001ameman54-scaled.jpg");
+		background-image: var(--fv-image-pc);
 	}
 }
 
@@ -347,7 +364,7 @@ body {
 	display: block;
 	padding: 0;
 	margin: 0;
-	background: url(http://localhost/hotel/wp-content/uploads/2024/10/logo_white.png) center center / contain no-repeat;
+	background: var(--fv-logo) center center / contain no-repeat;
 }
 
 .appeal-content {
@@ -365,7 +382,7 @@ body {
 }
 
 .footer-bottom-logo {
-	float:initial;
+	float: initial;
 	position: static;
 	margin-bottom: 40px;
 }
@@ -379,9 +396,27 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 10px;
 }
 
-.navi-footer-in > .menu-footer  {
+.footer-sns-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 22px;
+}
+
+.footer-sns-link {
+	padding: 10px 0;
+}
+
+.footer-sns-link i {
+	font-size: 22px;
+	color: var(--black);
+	transition: opacity 0.3s ease-out;
+}
+
+.navi-footer-in > .menu-footer {
 	flex-direction: column;
 	flex-wrap: initial;
 	align-items: center;
@@ -393,7 +428,7 @@ body {
 	border: none;
 }
 
-.navi-footer-in > .menu-footer li.menu-item a  {
+.navi-footer-in > .menu-footer li.menu-item a {
 	padding: 10px 0;
 }
 
@@ -402,52 +437,64 @@ body {
 	font-size: 10px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 	.footer-bottom {
 		font-size: 18px;
 		padding: 50px 0 0;
 	}
-	
+
 	.footer-bottom-logo img {
 		width: 260px;
 	}
-	
-	.navi-footer-in > .menu-footer  {
+
+	.navi-footer-in > .menu-footer {
 		padding: 40px 0 70px;
 	}
-	
-	.navi-footer-in > .menu-footer li.menu-item a  {
+
+	.navi-footer-in > .menu-footer li.menu-item a {
 		font-size: 18px;
 	}
-	
+
 	.copyright {
 		font-size: 12px;
 	}
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	.footer-bottom {
 		font-size: 20px;
 		padding: 60px 0 0;
 	}
-	
+
 	.footer-bottom-logo img {
 		width: 320px;
 	}
-	
-	.navi-footer-in > .menu-footer  {
+
+	.footer-sns-area {
+		gap: 26px;
+	}
+
+	.footer-sns-link i {
+		font-size: 26px;
+	}
+
+	.footer-sns-link:hover i {
+		opacity: var(--hovered-opacity);
+	}
+
+	.navi-footer-in > .menu-footer {
 		padding: 50px 0 80px;
 		flex-direction: row;
 		justify-content: center;
 		gap: 56px;
 	}
-	
-	.navi-footer-in > .menu-footer li.menu-item a  {
+
+	.navi-footer-in > .menu-footer li.menu-item a {
 		font-size: 20px;
 		position: relative;
 	}
-	
-	.navi-footer-in > .menu-footer li.menu-item a::before  {
+
+	.navi-footer-in > .menu-footer li.menu-item a::before {
 		content: "";
 		position: absolute;
 		bottom: 10px;
@@ -459,15 +506,15 @@ body {
 		transform-origin: left;
 		transition: transform 0.3s ease-out;
 	}
-	
-	.navi-footer-in > .menu-footer li.menu-item a:hover  {
+
+	.navi-footer-in > .menu-footer li.menu-item a:hover {
 		background-color: var(--white);
 	}
-	
-	.navi-footer-in > .menu-footer li.menu-item a:hover::before  {
+
+	.navi-footer-in > .menu-footer li.menu-item a:hover::before {
 		transform: scaleX(1);
 	}
-	
+
 	.copyright {
 		font-size: 14px;
 	}
@@ -477,16 +524,16 @@ body {
 ** レスポンシブデザイン用のメディアクエリ
 ************************************/
 /*1023px以下*/
-@media screen and (max-width: 1023px){
-  /*必要ならばここにコードを書く*/
+@media screen and (max-width: 1023px) {
+	/*必要ならばここにコードを書く*/
 }
 
 /*834px以下*/
-@media screen and (max-width: 834px){
-  /*必要ならばここにコードを書く*/
+@media screen and (max-width: 834px) {
+	/*必要ならばここにコードを書く*/
 }
 
 /*480px以下*/
-@media screen and (max-width: 480px){
-  /*必要ならばここにコードを書く*/
+@media screen and (max-width: 480px) {
+	/*必要ならばここにコードを書く*/
 }
