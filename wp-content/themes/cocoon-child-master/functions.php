@@ -15,6 +15,8 @@ function add_swiper_files()
     wp_enqueue_script('swiper-script', get_stylesheet_directory_uri() . '/assets/swiper/swiper-bundle.min.js', array(), '1.0.0', true);
     wp_enqueue_script('swiper-js-script', get_stylesheet_directory_uri() . '/js/swiper-custom.js', array('swiper-script'), '1.0.0', true);
   }
+
+  wp_enqueue_script('active-target', get_stylesheet_directory_uri() . '/js/active-target.js', array(), '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'add_swiper_files');
