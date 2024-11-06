@@ -20,7 +20,7 @@ if ( !defined( 'ABSPATH' ) ) exit; ?>
     <a href="#" class="footer-sns-link" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
   <div class="footer-bottom-content">
-     <?php cocoon_template_part('tmp/navi-footer') ?>
+    <?php cocoon_template_part('tmp/navi-footer') ?>
 
     <div class="source-org copyright"><?php echo get_the_site_credit(); ?></div>
   </div>
