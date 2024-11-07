@@ -7,7 +7,7 @@ const mySwiper = new Swiper('.swiper', {
   loop: true,
   loopAdditionalSlides: 1,
   centeredSlides: true,
-  slidesPerView: 1.75,
+  slidesPerView: 1.5,
   spaceBetween: 40,
   pagination: {
     el: '.swiper-pagination',
@@ -15,12 +15,12 @@ const mySwiper = new Swiper('.swiper', {
   },
   breakpoints: {
     768: { //画面幅768px以上
-      slidesPerView: 2,
+      slidesPerView: 1.75,
       spaceBetween: 60,
     },
     1024: { //画面幅1024px以上
       slidesPerView: 2.5,
-      spaceBetween: 100,
+      spaceBetween: 120,
     }
   },
 });

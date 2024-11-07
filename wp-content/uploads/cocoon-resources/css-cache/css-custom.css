@@ -12,6 +12,9 @@ body.public-page{
 .sidebar{
   width: 376px;
 }
+.column-full-wide .content-in{
+  width: 100%;
+}
 .logo-header img{
   width: 140px;
   height: auto;
