@@ -20,6 +20,7 @@ Version:    1.1.3
 ************************************/
 :root {
 	--black: #000;
+	--border-black: #d7d7d7;
 	--white: #fff;
 	--white-transparent: #ffffff1a;
 	--bg-white: #f8f8f8;
@@ -28,6 +29,11 @@ Version:    1.1.3
 	--fv-image-pc: url(http://localhost/hotel/wp-content/uploads/2024/10/001ameman54-scaled.jpg);
 	--fv-logo: url(http://localhost/hotel/wp-content/uploads/2024/10/logo_white.png);
 	--nav-bg-image: url(http://localhost/hotel/wp-content/uploads/2024/10/kyotoDSC_63930185-scaled.jpg);
+}
+
+/* ページ作成エディタのスタイル */
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	max-width: 100% !important;
 }
 
 body {
@@ -131,6 +137,10 @@ body {
 	}
 }
 
+.wp-block-image.page-top-image-wrapper {
+	margin-bottom: 0;
+}
+
 .page-top-image-wrapper > img {
 	width: 100%;
 	height: 100svh;
@@ -220,6 +230,10 @@ body {
 	padding: 80px 15px 0;
 }
 
+.body .wp-block-columns.no-padding {
+	padding: 0;
+}
+
 .body .wp-block-columns.sp-padding {
 	padding: 80px 0 0;
 }
@@ -299,6 +313,22 @@ body {
 	gap: 1.8rem;
 }
 
+.is-layout-flex.middle-gap {
+	gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+	.is-layout-flex.middle-gap {
+		gap: 60px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.is-layout-flex.middle-gap {
+		gap: 80px;
+	}
+}
+
 .article p {
 	font-size: 14px;
 	line-height: 2;
@@ -313,6 +343,22 @@ body {
 @media screen and (min-width: 1024px) {
 	.article p {
 		font-size: 22px;
+	}
+}
+
+.article .small-text {
+	font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+	.article .small-text {
+		font-size: 17px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.article .small-text {
+		font-size: 18px;
 	}
 }
 
@@ -485,6 +531,11 @@ body {
 .article h1 .en span.delay-4,
 .article h2 .en span.delay-4 {
 	transition-delay: 0.6s;
+}
+
+.article h1 .en span.delay-5,
+.article h2 .en span.delay-5 {
+	transition-delay: 0.75s;
 }
 
 .article h1.js-no-actived .ja,
@@ -1033,6 +1084,131 @@ body {
 
 	.copyright {
 		font-size: 14px;
+	}
+}
+
+/************************************
+** テーブル関連
+************************************/
+.custom-table,
+.custom-table div,
+.custom-table dt,
+.custom-table dd,
+.custom-table ul,
+.custom-table ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.custom-table .table-row {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.custom-table .table-row:last-of-type dd {
+	border-bottom: 1px solid var(--border-black);
+}
+
+.custom-table dt {
+	font-size: 13px;
+	padding: 20px 10px 0;
+	border-top: 1px solid var(--border-black);
+}
+
+.custom-table dd {
+	font-size: 15px;
+	padding: 0 10px 20px;
+}
+
+.custom-table dd .small {
+	font-size: 12px;
+}
+
+.custom-table .notice-list {
+	font-size: 11px;
+	margin-top: 5px;
+}
+
+.custom-table .price-list .price-title {
+	display: inline-block;
+	width: 30%;
+}
+
+.custom-table .price-list .price-number {
+	letter-spacing: 0.07em;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+	.custom-table .table-row {
+		gap: 16px;
+	}
+
+	.custom-table dt {
+		font-size: 18px;
+		padding: 24px 16px 0;
+	}
+
+	.custom-table dd {
+		font-size: 22px;
+		padding: 0 16px 24px;
+	}
+
+	.custom-table dd .small {
+		font-size: 18px;
+	}
+
+	.custom-table .notice-list {
+		font-size: 16px;
+		margin-top: 10px;
+	}
+
+	.custom-table .price-list .price-number {
+		font-size: 25px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.custom-table .table-row {
+		flex-direction: row;
+		gap: 16px;
+	}
+
+	.custom-table .table-row:last-of-type dt {
+		border-bottom: 1px solid var(--border-black);
+	}
+
+	.custom-table dt {
+		width: 25%;
+		font-size: 18px;
+		padding: 24px 0;
+	}
+
+	.custom-table dd {
+		width: 75%;
+		font-size: 20px;
+		padding: 24px 0;
+		border-top: 1px solid var(--border-black);
+	}
+
+	.custom-table dd .small {
+		font-size: 16px;
+	}
+
+	.custom-table .notice-list {
+		font-size: 15px;
+		margin-top: 16px;
+	}
+
+	.custom-table .price-list .price-title {
+		width: 40%;
+	}
+
+	.custom-table .price-list .price-number {
+		font-size: 24px;
 	}
 }
 
