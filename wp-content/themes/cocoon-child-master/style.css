@@ -47,6 +47,7 @@ body {
 	background-color: var(--bg-white);
 	padding: 0 !important;
 	margin: 0 !important;
+	border: none !important;
 }
 
 .entry-content {
@@ -314,7 +315,8 @@ body {
 .body figure.js-no-actived,
 .body p.js-no-actived,
 .body .custom-table.js-no-actived,
-.body .custom-image-text-wrapper.js-no-actived {
+.body .custom-image-text-wrapper.js-no-actived,
+.body .new-list-box.js-no-actived {
 	opacity: 0;
 	transition: opacity 0.8s ease-in-out;
 }
@@ -323,7 +325,8 @@ body {
 .body figure.js-no-actived.js-actived,
 .body p.js-no-actived.js-actived,
 .body .custom-table.js-no-actived.js-actived,
-.body .custom-image-text-wrapper.js-no-actived.js-actived {
+.body .custom-image-text-wrapper.js-no-actived.js-actived,
+.body .new-list-box.js-no-actived.js-actived {
 	opacity: 1;
 }
 
@@ -1392,19 +1395,83 @@ body {
 }
 
 /************************************
-** レスポンシブデザイン用のメディアクエリ
+** 新着記事一覧表示
 ************************************/
-/*1023px以下*/
-@media screen and (max-width: 1023px) {
-	/*必要ならばここにコードを書く*/
+.new-entry-card-title {
+	font-size: 16px;
 }
 
-/*834px以下*/
-@media screen and (max-width: 834px) {
-	/*必要ならばここにコードを書く*/
+@media screen and (min-width: 768px) {
+	.new-entry-card-title {
+		font-size: 20px;
+	}
 }
 
-/*480px以下*/
-@media screen and (max-width: 480px) {
-	/*必要ならばここにコードを書く*/
+@media screen and (min-width: 1024px) {
+	.new-entry-card-title {
+		font-size: 24px;
+	}
+}
+
+.new-entry-card-snippet {
+	font-size: 12px;
+	overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2 !important;
+	line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+	.new-entry-card-snippet {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.new-entry-card-snippet {
+		font-size: 18px;
+		-webkit-line-clamp: 3 !important;
+		line-height: 1.75;
+	}
+}
+
+.new-entry-cards.widget-entry-cards .a-wrap {
+	padding: 5% 1%;
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.new-entry-cards.widget-entry-cards .a-wrap {
+		padding: 3% 1%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.new-entry-cards.widget-entry-cards .a-wrap {
+		padding: 2% 1%;
+	}
+}
+
+.card-arrow .card-content {
+	margin-right: 35px;
+}
+
+.widget-entry-cards figure.new-entry-card-thumb {
+	margin-right: 3.5%;
+	margin-top: 0;
+	width: 120px;
+}
+
+@media screen and (min-width: 768px) {
+	.widget-entry-cards figure.new-entry-card-thumb {
+		width: 180px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.widget-entry-cards figure.new-entry-card-thumb {
+		width: 220px;
+	}
 }
