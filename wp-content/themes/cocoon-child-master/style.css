@@ -1552,3 +1552,51 @@ body {
 		width: 220px;
 	}
 }
+
+/************************************
+** contact form
+************************************/
+.wpcf7 .small {
+	display: inline-block;
+	margin-left: 0px;
+	font-size: 12px;
+}
+
+.wpcf7 input[type="submit"] {
+	color: var(--white);
+	background-color: var(--black);
+	border-radius: 100vmax;
+	display: block;
+	margin-inline: auto;
+	width: 60%;
+	padding: 18px 0;
+	font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+	.wpcf7 .small {
+		font-size: 14px;
+	}
+
+	.wpcf7 input[type="submit"] {
+		padding: 22px 0;
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.wpcf7 .small {
+		font-size: 16px;
+	}
+
+	.wpcf7 input[type="submit"] {
+		width: 33%;
+		padding: 28px 0;
+		font-size: 24px;
+		transition: opacity 0.3s ease-out;
+	}
+
+	.wpcf7 input[type="submit"]:hover {
+		opacity: var(--hovered-opacity);
+	}
+}
