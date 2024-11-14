@@ -411,6 +411,10 @@ body {
 	gap: 40px;
 }
 
+.is-layout-flex.middle-margin-bottom {
+	margin-bottom: 40px;
+}
+
 .is-layout-flex.sp-no-gap {
 	gap: 0;
 }
@@ -419,11 +423,19 @@ body {
 	.is-layout-flex.middle-gap {
 		gap: 60px;
 	}
+
+	.is-layout-flex.middle-margin-bottom {
+		margin-bottom: 60px;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.is-layout-flex.middle-gap {
 		gap: 80px;
+	}
+
+	.is-layout-flex.middle-margin-bottom {
+		margin-bottom: 80px;
 	}
 
 	.is-layout-flex.sp-no-gap {
@@ -1365,12 +1377,12 @@ body {
 	font-size: 14px;
 }
 
-.custom-table .price-list .price-title {
+.custom-table .price-title {
 	display: inline-block;
 	width: 30%;
 }
 
-.custom-table .price-list .price-number {
+.custom-table .price-number {
 	letter-spacing: 0.07em;
 	font-weight: 700;
 	font-size: 18px;
@@ -1412,7 +1424,7 @@ body {
 		font-size: 20px;
 	}
 
-	.custom-table .price-list .price-number {
+	.custom-table .price-number {
 		font-size: 25px;
 	}
 }
@@ -1462,11 +1474,11 @@ body {
 		font-size: 20px;
 	}
 
-	.custom-table .price-list .price-title {
+	.custom-table .price-title {
 		width: 40%;
 	}
 
-	.custom-table .price-list .price-number {
+	.custom-table .price-number {
 		font-size: 24px;
 	}
 }
