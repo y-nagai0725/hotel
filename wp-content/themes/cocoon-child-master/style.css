@@ -1063,6 +1063,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	opacity: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1082,10 +1083,45 @@ body {
 	padding: 0;
 	margin: 0;
 	background: var(--fv-logo) center center / contain no-repeat;
+	clip-path: inset(0 100% 0 0);
 }
 
 .appeal-content {
 	display: none;
+}
+
+.appeal.no-animation {
+	opacity: 1;
+}
+
+.appeal.no-animation .appeal-in {
+	clip-path: inset(0 0 0 0);
+}
+
+.appeal.opening-animation {
+	animation: show-appeal 0.8s ease-in-out forwards;
+}
+
+.appeal.opening-animation .appeal-in {
+	animation: show-appeal-in 0.8s 0.4s ease-out forwards;
+}
+
+@keyframes show-appeal {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes show-appeal-in {
+	0% {
+		clip-path: inset(0 100% 0 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+	}
 }
 
 /************************************
