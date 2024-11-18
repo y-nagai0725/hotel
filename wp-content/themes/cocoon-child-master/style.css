@@ -80,6 +80,22 @@ body {
 	border-radius: 100vmax;
 }
 
+.margin-bottom-middle {
+	margin-bottom: 40px !important;
+}
+
+@media screen and (min-width: 768px) {
+	.margin-bottom-middle {
+		margin-bottom: 60px !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.margin-bottom-middle {
+		margin-bottom: 80px !important;
+	}
+}
+
 .reserve-button-wrapper {
 	margin: 40px 0 0 0 !important;
 }
@@ -954,9 +970,15 @@ body {
 	font-size: 15px;
 }
 
+@media screen and (min-width: 768px) {
+	#navi-menu-content .menu-drawer a {
+		font-size: 17px;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	#navi-menu-content .menu-drawer a {
-		font-size: 19px;
+		font-size: 21px;
 		position: relative;
 	}
 
@@ -1705,7 +1727,7 @@ body {
 	}
 
 	.custom-summary .summary-inner {
-		padding: 0 0 20px;
+		padding: 0 0 10px;
 		font-size: 20px;
 	}
 
