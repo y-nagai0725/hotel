@@ -189,6 +189,7 @@ body {
 
 @media screen and (min-width: 768px) {
 	.page-top-image-wrapper > img {
+		height: 60svh;
 		padding: 0 30px;
 	}
 }
@@ -1040,6 +1041,12 @@ body {
 	gap: 16px;
 }
 
+@media screen and (min-width: 768px) {
+	#navi-menu-content .menu-drawer {
+		gap: 28px;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	#navi-menu-content .menu-drawer {
 		gap: 32px;
@@ -1053,7 +1060,7 @@ body {
 
 @media screen and (min-width: 768px) {
 	#navi-menu-content .menu-drawer a {
-		font-size: 17px;
+		font-size: 18px;
 	}
 }
 
